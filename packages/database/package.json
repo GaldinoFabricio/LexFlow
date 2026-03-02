@@ -1,0 +1,27 @@
+{
+  "name": "@lex-flow/database",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Knex database configuration and query layer for Lex Flow Assistant",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsc --project tsconfig.json --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "migrate": "knex --knexfile src/config/knexfile.ts migrate:latest",
+    "migrate:rollback": "knex --knexfile src/config/knexfile.ts migrate:rollback",
+    "migrate:make": "knex --knexfile src/config/knexfile.ts migrate:make",
+    "seed:run": "knex --knexfile src/config/knexfile.ts seed:run"
+  },
+  "dependencies": {
+    "knex": "^3.1.0",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

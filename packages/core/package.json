@@ -1,0 +1,17 @@
+{
+  "name": "@lex-flow/core",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Core domain entities, value objects, and errors for Lex Flow Assistant",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsc --project tsconfig.json --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,3 +1,7 @@
-export * from './types/OpenClawWebhookPayload';
-export * from './dto/IncomingMessageDto';
-export * from './parser/OpenClawMessageParser';
+export { createOpenClawWebhookHandler } from "./http/OpenClawWebhookHandler";
+export { mountOpenClawWebhook } from "./http/express/openclaw.router";
+export {
+  HttpMessageForwarder,
+  ForwardError,
+} from "./services/HttpMessageForwarder";
+export type { IMessageForwarder } from "./services/IMessageForwarder";
