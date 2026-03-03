@@ -1,9 +1,13 @@
-import { createServer } from './server';
-import { env } from './config/env';
+import { createApp } from "./app";
+import { env } from "./config/env";
 
-const app = createServer();
+const app = createApp();
 
 app.listen(env.PORT, () => {
-  console.log(`[api] Server running on http://localhost:${env.PORT}`);
-  console.log(`[api] GET http://localhost:${env.PORT}/health`);
+  console.log(JSON.stringify({
+    level: "info",
+    message: "Server running",
+    url: "http://localhost:" + env.PORT,
+    env: env.NODE_ENV,
+  }));
 });
